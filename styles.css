@@ -1,0 +1,222 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #1e1e1e;
+    color: #ddd;
+    display: flex;
+    height: 100vh;
+  }
+  
+  .container {
+    display: flex;
+    width: 100%;
+  }
+  
+  .sidebar {
+    width: 300px;
+    padding: 20px;
+    background: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    color: #ddd;
+  }
+  
+  .sidebar h2 {
+    color: #4CAF50;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .sidebar p {
+    font-size: 14px;
+    color: #bbb;
+  }
+  
+  button {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  button:active {
+    background-color: #388e3c;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    min-height: 150px;
+    background-color: #2c2c2c;
+    color: #ddd;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #2c2c2c;
+    color: #ddd;
+  }
+  
+  .json-tree {
+    margin-top: 20px;
+    text-align: left;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #2f3136;
+    color: white;
+    max-height: 500px;
+    overflow-y: auto;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .json-tree ul {
+    list-style: none;
+    padding-left: 20px;
+  }
+  
+  .json-tree li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .json-tree li span {
+    font-size: 14px;
+  }
+  
+  .json-tree .key {
+    font-weight: bold;
+    color: #4CAF50;
+  }
+  
+  .json-tree .value {
+    color: #e76f51;
+  }
+  
+  .json-tree .string {
+    color: #e74c3c;
+  }
+  
+  .json-tree .number {
+    color: #f39c12;
+  }
+  
+  .json-tree .boolean {
+    color: #8e44ad;
+  }
+  
+  .json-tree .null {
+    color: #7f8c8d;
+  }
+  
+  .json-tree .collapsible {
+    cursor: pointer;
+    color: #f1a8a8;
+    font-weight: normal;
+    display: inline-block;
+    margin-left: 5px;
+    transition: color 0.2s;
+  }
+  
+  .json-tree .collapsible:hover {
+    color: #d45d5d;
+  }
+  
+  .json-tree .collapsed > .json-children {
+    display: none;
+  }
+  
+  .json-tree .json-children {
+    margin-left: 20px;
+  }
+  
+  .json-tree li span.icon {
+    margin-right: 8px;
+    font-size: 12px;
+    color: #4CAF50;
+  }
+  
+  .json-tree li span.icon.open {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+  }
+  
+  .json-tree li span.icon.closed {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Tooltip Styles */
+  .tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    visibility: hidden; /* Initially hidden */
+    z-index: 10;
+    transition: visibility 0.2s;
+    white-space: nowrap;
+  }
+  
+  .json-tree li:hover .tooltip {
+    visibility: visible;
+  }
+  
+  /* Button styles for Show More / Show Less */
+  .show-more {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .show-more:hover {
+    background-color: #45a049;
+  }
+  
+  .show-more:active {
+    background-color: #388e3c;
+  }
+  

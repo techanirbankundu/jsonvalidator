@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced JSON Visualizer - Dark Mode</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h2>JSON Beginner Guide</h2>
+      <p>Learn JSON structure and how it is organized.</p>
+      <p><strong>JSON Object</strong>: A collection of key-value pairs.</p>
+      <p><strong>JSON Array</strong>: A list of values.</p>
+      <p><strong>Key</strong>: The name or identifier of the data.</p>
+      <p><strong>Value</strong>: The data associated with the key (can be string, number, array, etc.).</p>
+      <button onclick="toggleInfo()">Toggle Information</button>
+    </div>
+
+    <div class="main-content">
+      <h1>Advanced JSON Visualizer</h1>
+      <textarea id="jsonInput" placeholder="Paste your JSON here..." rows="10" cols="50"></textarea><br>
+      <button onclick="renderJson()">Render JSON</button>
+      <input type="text" id="search" placeholder="Search JSON..." oninput="searchJson()">
+      <div id="jsonTree" class="json-tree"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
